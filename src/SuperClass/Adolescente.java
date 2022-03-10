@@ -10,7 +10,6 @@ public class Adolescente extends Pessoa {
 		
 	}
 	
-	
 	@Override
 	public String classificarIMC(double imc) {
 		String classe = "";

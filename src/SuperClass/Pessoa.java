@@ -97,14 +97,6 @@ abstract class Pessoa
 	
 	public void imprimirRelatorio()
 	{	
-		System.out.println("Ficha técnica: Adolescente: " + 
-		"\nNome: " + getNome() + 
-		"\nGênero: " + getGenero() + 
-		"\nFrequencia de atividade fisíca: " + getFrequenciaAtiv() +
-		"\nIdade: " + getIdade() + 
-		"\nAltura: " + getAltura() + 
-		"\nPeso: " + getPeso() + 
-		"\nClassifica: " + classificarIMC(calcularImc()) + 
-		"\nIMC: "+calcularImc());
+		System.out.println("Ficha técnica: Adolescente: " + "\nNome: " + getNome() + "\nGênero: " + getGenero() + "\nFrequencia de atividade fisíca: " + getFrequenciaAtiv() +"\nIdade: " + getIdade() + "\nAltura: " + getAltura() + "\nPeso: " + getPeso() + "\nIMC: "+calcularImc() + "\nGrau de classificação " + classificarIMC(calcularImc()) );
 	}
 }
