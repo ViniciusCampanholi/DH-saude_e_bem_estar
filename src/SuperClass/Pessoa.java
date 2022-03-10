@@ -84,4 +84,11 @@ abstract class Pessoa
 		//Retorna um valor double com o arredondamento
 		return bd.doubleValue();
 	}
+	
+	abstract String classificarIMC(double imc);
+	
+	public void imprimirRelatorio()
+	{	
+		System.out.println("Ficha técnica: Adolescente: " + "\nNome: " + getNome() + "\nGênero: " + getGenero() + "\nFrequencia de atividade fisíca: " + getFrequenciaAtiv() +"\nIdade: " + getIdade() + "\nAltura: " + getAltura() + "\nPeso: " + getPeso() + "\nIMC: "+calcularImc() + "\nGrau de classificação " + classificarIMC(calcularImc()) );
+	}
 }
