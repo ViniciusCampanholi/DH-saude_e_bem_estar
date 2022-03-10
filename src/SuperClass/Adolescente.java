@@ -11,12 +11,11 @@ public class Adolescente extends Pessoa {
 	@Override
 	public String classificarIMC(double imc) {
 		String classe = "";
-		
-		if(imc<25) {
-			classe = "abaixo do peso";
-		}else {
-			classe = "acima do peso";
-		}
+			if(imc<26) {
+				classe = "ABAIXO do peso";
+			}else {
+				classe = "acima do peso";
+			}
 		
 		return classe;
 	}
