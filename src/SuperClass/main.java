@@ -1,6 +1,5 @@
 package SuperClass;
 
-import java.util.ArrayList;
 
 public class main {
 
@@ -9,10 +8,6 @@ public class main {
 		Adolescente adolescente = new Adolescente("Fulano", "Masculino", 5, 15, 1.75, 65);
 		
 		adolescente.imprimirRelatorio();
-		
-		adolescente.calcularImc();
-		
-		adolescente.classificarIMC(adolescente.calcularImc());
 		
 		
 		
