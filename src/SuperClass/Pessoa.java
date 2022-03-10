@@ -85,15 +85,7 @@ abstract class Pessoa
 		return bd.doubleValue();
 	}
 	
-	public String classificarIMC(double imc) {
-		String classe = "";
-		if(imc<25) {
-			classe = "abaixo do peso";
-		}else {
-			classe = "acima do peso";
-		}
-		return classe;
-	}
+	abstract String classificarIMC(double imc);
 	
 	public void imprimirRelatorio()
 	{	
