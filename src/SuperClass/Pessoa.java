@@ -3,7 +3,7 @@ package SuperClass;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Pessoa
+abstract class Pessoa
 {
 	//Atributos declarados
 	private String nome;
@@ -76,7 +76,7 @@ public class Pessoa
 	public double calcularImc()
 	{
 		 //Calcula o imc e armazena na variavel imc
-		double imc = peso / Math.pow(altura, 2);
+		double imc = getPeso() / Math.pow(getAltura(), 2);
 		
 		//Instancia uma classe para arredendodamento com fator de escala 1 (1 casa decimal)
 		BigDecimal bd = new BigDecimal(imc).setScale(1, RoundingMode.HALF_EVEN);
