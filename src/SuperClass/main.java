@@ -9,6 +9,11 @@ public class main {
 		
 		adolescente.imprimirRelatorio();
 		
+		Infantil infantil = new Infantil("Mariazinha", "Feminino", 1, 7, 1.35, 37);
+		
+		infantil.imprimirRelatorio();
+		
+		
 		
 		
 
