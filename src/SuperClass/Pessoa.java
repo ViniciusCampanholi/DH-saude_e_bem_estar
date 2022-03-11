@@ -3,19 +3,17 @@ package SuperClass;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-abstract class Pessoa
-{
-	//Atributos declarados
+abstract class Pessoa {
+	// Atributos declarados
 	private String nome;
 	private String genero;
 	private int frequenciaAtiv;
 	private int idade;
 	private double altura;
 	private float peso;
-	
-	//Construtor de classe
-	public Pessoa(String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso )
-	{
+
+	// Construtor de classe
+	public Pessoa(String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso) {
 		this.nome = nome;
 		this.genero = genero;
 		this.frequenciaAtiv = frequenciaAtiv;
@@ -23,8 +21,8 @@ abstract class Pessoa
 		this.altura = altura;
 		this.peso = peso;
 	}
-	
-	//Metodos Getters e Setters	
+
+	// Metodos Getters e Setters
 	public String getNome() {
 		return nome;
 	}
@@ -72,23 +70,25 @@ abstract class Pessoa
 	public void setPeso(float peso) {
 		this.peso = peso;
 	}
-	
-	public double calcularImc()
-	{
-		 //Calcula o imc e armazena na variavel imc
+
+	public double calcularImc() {
+		// Calcula o imc e armazena na variavel imc
 		double imc = getPeso() / Math.pow(getAltura(), 2);
-		
-		//Instancia uma classe para arredendodamento com fator de escala 1 (1 casa decimal)
+
+		// Instancia uma classe para arredendodamento com fator de escala 1 (1 casa
+		// decimal)
 		BigDecimal bd = new BigDecimal(imc).setScale(1, RoundingMode.HALF_EVEN);
-		
-		//Retorna um valor double com o arredondamento
+
+		// Retorna um valor double com o arredondamento
 		return bd.doubleValue();
 	}
-	
+
 	abstract String classificarIMC(double imc);
-	
-	public void imprimirRelatorio()
-	{	
-		System.out.println("Ficha técnica: Adolescente: " + "\nNome: " + getNome() + "\nGênero: " + getGenero() + "\nFrequencia de atividade fisíca: " + getFrequenciaAtiv() +"\nIdade: " + getIdade() + "\nAltura: " + getAltura() + "\nPeso: " + getPeso() + "\nIMC: "+calcularImc() + "\nGrau de classificação " + classificarIMC(calcularImc()) );
+
+	public void imprimirRelatorio() {
+		System.out.println("Ficha técnica: Adolescente: " + "\nNome: " + getNome() + "\nGênero: " + getGenero()
+				+ "\nFrequencia de atividade fisíca: " + getFrequenciaAtiv() + "\nIdade: " + getIdade() + "\nAltura: "
+				+ getAltura() + "\nPeso: " + getPeso() + "\nIMC: " + calcularImc() + "\nGrau de classificação "
+				+ classificarIMC(calcularImc()));
 	}
 }
