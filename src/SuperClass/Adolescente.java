@@ -9,18 +9,6 @@ public class Adolescente extends Pessoa {
 	}
 	
 	@Override
-	public String classificarIMC(double imc) {
-		String classe = "";
-			if(imc<26) {
-				classe = "ABAIXO do peso";
-			}else {
-				classe = "acima do peso";
-			}
-		
-		return classe;
-	}
-<<<<<<< HEAD
-	
 	public void classificarIMC(double imc) {
 		if (super.getGenero() == "Feminino")
 		{
