@@ -19,6 +19,31 @@ public class TestarClasse {
 			op = leia.nextInt();
 			
 			switch(op) {
+				case 1:
+					leia.nextLine();
+					Adulto b = new Adulto();
+					System.out.println("Digite o nome: ");
+					b.setNome(leia.nextLine());
+					System.out.println("Digite o sexo: ");
+					b.setGenero(leia.nextLine());
+					System.out.println("Digite quantas vezes você pratica atividade fisica por dia");
+					b.setFrequenciaAtiv(leia.nextInt());
+					System.out.println("Digite a idade: ");
+					b.setIdade(leia.nextInt());
+					while(b.getIdade()<18 || b.getIdade()>100) {
+						System.out.println("A idade esta abaixo (de 18 para cima) do considerado para adulto, por favor digite novamente");
+						b.setIdade(leia.nextInt());
+					}
+					System.out.println("Digite a altura: ");
+					b.setAltura(leia.nextDouble());
+					System.out.println("Digite o peso: ");
+					b.setPeso(leia.nextFloat());
+					b.calcularImc();
+					b.classificarIMC(b.calcularImc());
+					b.imprimirRelatorio();
+					p.add(b);
+					break;
+					
 				case 2:
 					leia.nextLine();
 					Adolescente a = new Adolescente();
@@ -31,7 +56,7 @@ public class TestarClasse {
 					System.out.println("Digite a idade: ");
 					a.setIdade(leia.nextInt());
 					while(a.getIdade()<12 || a.getIdade()>18) {
-						System.out.println("A idade esta abaixo (de 18 para cima) do considerado para adulto, por favor digite novamente");
+						System.out.println("A idade esta abaixo ou acima do considerado para adolescente, por favor digite novamente");
 						a.setIdade(leia.nextInt());
 					}
 					System.out.println("Digite a altura: ");
@@ -56,7 +81,7 @@ public class TestarClasse {
 					System.out.println("Digite a idade: ");
 					c.setIdade(leia.nextInt());
 					while(c.getIdade()<1 || c.getIdade()>12) {
-						System.out.println("A idade esta abaixo (de 18 para cima) do considerado para adulto, por favor digite novamente");
+						System.out.println("A idade esta abaixo ou acima do considerado para criança, por favor digite novamente");
 						c.setIdade(leia.nextInt());
 					}
 					System.out.println("Digite a altura: ");
