@@ -2,6 +2,11 @@ package SuperClass;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import SuperClass.Adolescente;
+import SuperClass.Pessoa;
 
 abstract class Pessoa {
 	// Atributos declarados
@@ -86,7 +91,8 @@ abstract class Pessoa {
 	abstract String classificarIMC(double imc);
 
 	public void imprimirRelatorio() {
-		System.out.println("Ficha técnica: Adolescente: " + "\nNome: " + getNome() + "\nGênero: " + getGenero()
+		System.out.println("-----------------------------");
+		System.out.println("Ficha técnica: " + "\nNome: " + getNome() + "\nGênero: " + getGenero()
 				+ "\nFrequencia de atividade fisíca: " + getFrequenciaAtiv() + "\nIdade: " + getIdade() + "\nAltura: "
 				+ getAltura() + "\nPeso: " + getPeso() + "\nIMC: " + calcularImc() + "\nGrau de classificação "
 				+ classificarIMC(calcularImc()));

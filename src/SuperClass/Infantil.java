@@ -2,6 +2,12 @@ package SuperClass;
 
 public class Infantil extends Pessoa {
 	
+	public Infantil() {
+		
+		super("", "", 0, 0, 0d, 0f);
+		
+	}
+	
 	public Infantil (String nome, String genero, int frequenciaAtiv,
 			int idade, double altura, float peso ) {
 		
