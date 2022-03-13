@@ -90,11 +90,21 @@ abstract class Pessoa {
 
 	abstract String classificarIMC(double imc);
 
+	public String verificarAtvFisica() {
+		String atv;
+		if (getFrequenciaAtiv()<2) {
+			atv = " Você precisa praticar mais atividades fisiscas, É aconselhado pelo menos 2 vezes na semana!";
+		} else {
+			atv = "Muito bom!  vezes por semana.\nNão se esqueça de fazer 30 minutos de alongamentos todos os dias!";
+		}
+		return atv;
+	}
+	
 	public void imprimirRelatorio() {
-		System.out.println("-----------------------------");
-		System.out.println("Ficha técnica: " + "\nNome: " + getNome() + "\nGênero: " + getGenero()
-				+ "\nFrequencia de atividade fisíca: " + getFrequenciaAtiv() + "\nIdade: " + getIdade() + "\nAltura: "
-				+ getAltura() + "\nPeso: " + getPeso() + "\nIMC: " + calcularImc() + "\nGrau de classificação "
+		System.out.println("\n\n-----------------------------");
+		System.out.println("FICHA TÉCNICA: " + "\nNOME: " + getNome() + "\nGENERO: " + getGenero()
+				+ "\nATIVIDADE FÍSICA: " + getFrequenciaAtiv() +" vezes por semana " + verificarAtvFisica() + "\nIDADE: " + getIdade() + "\nALTURA: "
+				+ getAltura() + "\nPESO: " + getPeso() + "\nIMC: " + calcularImc() + "\nCLASSIFICAÇÃO DO IMC: "
 				+ classificarIMC(calcularImc()));
 	}
 }
