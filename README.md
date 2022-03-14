@@ -3,7 +3,8 @@
 ## Desenvolvido em grupo e em linguagem java
 
 > Um programa que mostra ao usuário o seu status básico de saúde, levando em conta o Índice de Massa Corporal (IMC) e a frequência de atividade física praticada por semana.
-IMC: Informa a taxa de gordura corporal que é resultado da fórmula peso/altura².
+
+> IMC: Informa a taxa de gordura corporal que é resultado da fórmula peso/altura².
 
 > Entrada de dados: Nome, Idade, Gênero, Altura, Peso, Frequência de atividades físicas.
 
