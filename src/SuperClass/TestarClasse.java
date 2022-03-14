@@ -41,7 +41,7 @@ public class TestarClasse {
 					b.setNome(leia.nextLine());
 					System.out.println("Digite o genero: ");
 					b.setGenero(leia.nextLine());
-					System.out.println("Digite quantas vezes você pratica atividade fisica por dia");
+					System.out.println("Digite quantas vezes você pratica atividade fisica por semana");
 					b.setFrequenciaAtiv(leia.nextInt());
 					System.out.println("Digite a idade: ");
 					b.setIdade(leia.nextInt());
@@ -67,7 +67,7 @@ public class TestarClasse {
 					a.setNome(leia.nextLine());
 					System.out.println("Digite o genero: ");
 					a.setGenero(leia.nextLine());
-					System.out.println("Digite quantas vezes você pratica atividade fisica por dia");
+					System.out.println("Digite quantas vezes você pratica atividade fisica por semana");
 					a.setFrequenciaAtiv(leia.nextInt());
 					System.out.println("Digite a idade: ");
 					a.setIdade(leia.nextInt());
@@ -93,7 +93,7 @@ public class TestarClasse {
 					c.setNome(leia.nextLine());
 					System.out.println("Digite o genero: ");
 					c.setGenero(leia.nextLine());
-					System.out.println("Digite quantas vezes você pratica atividade fisica por dia");
+					System.out.println("Digite quantas vezes você pratica atividade fisica por semana");
 					c.setFrequenciaAtiv(leia.nextInt());
 					System.out.println("Digite a idade: ");
 					c.setIdade(leia.nextInt());
