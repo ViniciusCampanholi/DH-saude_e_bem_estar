@@ -4,12 +4,12 @@ public class Adulto extends Pessoa {
 	
 	public Adulto() {
 		
-		super("", "", 0, 0, 0d, 0f);
+		super("", "", "", 0, 0, 0d, 0f);
 	}
 
-	public Adulto(String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso) {
+	public Adulto(String faixa, String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso) {
 
-		super(nome, genero, frequenciaAtiv, idade, altura, peso);
+		super(faixa, nome, genero, frequenciaAtiv, idade, altura, peso);
 
 	}
 		@Override
@@ -44,7 +44,7 @@ public class Adulto extends Pessoa {
 		}
 			
 			
-			if (super.getGenero() == "Msculino") {
+			if (super.getGenero() == "Masculino") {
 				if (super.getIdade() >= 18) {
 					if (imc <= 20.7) {
 						classe = "Abaixo do peso";

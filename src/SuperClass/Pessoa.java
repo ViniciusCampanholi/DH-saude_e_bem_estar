@@ -10,6 +10,7 @@ import SuperClass.Pessoa;
 
 abstract class Pessoa {
 	// Atributos declarados
+	private String faixa;
 	private String nome;
 	private String genero;
 	private int frequenciaAtiv;
@@ -18,13 +19,24 @@ abstract class Pessoa {
 	private float peso;
 
 	// Construtor de classe
-	public Pessoa(String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso) {
+	public Pessoa(String faixa, String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso) {
+		this.faixa = faixa;
 		this.nome = nome;
 		this.genero = genero;
 		this.frequenciaAtiv = frequenciaAtiv;
 		this.idade = idade;
 		this.altura = altura;
 		this.peso = peso;
+	}
+	
+	
+
+	public String getFaixa() {
+		return faixa;
+	}
+
+	public void setFaixa(String faixa) {
+		this.faixa = faixa;
 	}
 
 	// Metodos Getters e Setters
@@ -93,18 +105,21 @@ abstract class Pessoa {
 	public String verificarAtvFisica() {
 		String atv;
 		if (getFrequenciaAtiv()<2) {
-			atv = " Você precisa praticar mais atividades fisiscas, É aconselhado pelo menos 2 vezes na semana!";
+			atv = " Você precisa praticar mais atividades fisicas, É aconselhado pelo menos 2 vezes na semana!";
 		} else {
-			atv = "Muito bom!  vezes por semana.\nNão se esqueça de fazer 30 minutos de alongamentos todos os dias!";
+			atv = " Vezes por semana, Muito bom!\nNão se esqueça de fazer 30 minutos de alongamentos todos os dias!";
 		}
 		return atv;
 	}
 	
 	public void imprimirRelatorio() {
-		System.out.println("\n\n-----------------------------");
-		System.out.println("FICHA TÉCNICA: " + "\nNOME: " + getNome() + "\nGENERO: " + getGenero()
-				+ "\nATIVIDADE FÍSICA: " + getFrequenciaAtiv() +" vezes por semana " + verificarAtvFisica() + "\nIDADE: " + getIdade() + "\nALTURA: "
+		System.out.println("\n-----------------------------");
+		System.out.println("FICHA TÉCNICA " + getFaixa() + ": " + "\nNOME: " + getNome() + "\nGENERO: " + getGenero()
+				+ "\nATIVIDADE FÍSICA: " + getFrequenciaAtiv() + verificarAtvFisica() + "\nIDADE: " + getIdade() + "\nALTURA: "
 				+ getAltura() + "\nPESO: " + getPeso() + "\nIMC: " + calcularImc() + "\nCLASSIFICAÇÃO DO IMC: "
 				+ classificarIMC(calcularImc()));
+			
 	}
+	
+	
 }

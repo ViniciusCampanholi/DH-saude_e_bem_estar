@@ -4,14 +4,14 @@ public class Infantil extends Pessoa {
 	
 	public Infantil() {
 		
-		super("", "", 0, 0, 0d, 0f);
+		super("", "", "", 0, 0, 0d, 0f);
 		
 	}
 	
-	public Infantil (String nome, String genero, int frequenciaAtiv,
+	public Infantil (String faixa, String nome, String genero, int frequenciaAtiv,
 			int idade, double altura, float peso ) {
 		
-		super(nome, genero, frequenciaAtiv, idade, altura, peso);
+		super(faixa, nome, genero, frequenciaAtiv, idade, altura, peso);
 	}
 	
 	@Override

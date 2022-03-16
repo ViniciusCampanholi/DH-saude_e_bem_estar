@@ -4,13 +4,13 @@ public class Adolescente extends Pessoa {
 	
 	public Adolescente() {
 		
-		super("", "", 0, 0, 0d, 0f);
+		super("", "", "", 0, 0, 0d, 0f);
 		
 	}
 
-	public Adolescente(String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso) {
+	public Adolescente(String faixa, String nome, String genero, int frequenciaAtiv, int idade, double altura, float peso) {
 
-		super(nome, genero, frequenciaAtiv, idade, altura, peso);
+		super(faixa, nome, genero, frequenciaAtiv, idade, altura, peso);
 
 	}
 

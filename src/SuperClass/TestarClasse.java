@@ -7,20 +7,25 @@ public class TestarClasse {
 
 	public static void main(String[] args) {
 
-		ArrayList<Pessoa> p = new ArrayList();
+		ArrayList<Pessoa> p = new ArrayList<Pessoa>();
 		int op;
 		String mensagem;
 		String validador;
+		
+		Adolescente adolescente = new Adolescente("ADOLESCENTE", "Exemplo1", "Masculino", 4, 15, 1.70, 60);
+		p.add(adolescente);
+		Infantil crianca = new Infantil("CRIANÇA", "Exemplo2", "Feminino", 0, 10, 1.40, 30);
+		p.add(crianca);
 
 		Scanner leia = new Scanner(System.in);
 
 		System.out.println("Olá, antes de começarmos preciso saber de algumas coisas...");
-		System.out.println("\nEste programa não atende aos seguintes grupos:\n-Gestantes\n-Idosos\n-Heterofilistas ou praticantes de esportes de alto rendimento");
+		System.out.println("\nEste programa não atende aos seguintes grupos:\n-Gestantes\n-Idosos\n-Halterofilista ou praticantes de esportes de alto rendimento");
 		System.out.println("\nVocê se encontra dentro de um destes grupos?\ndigite |s| para sim e |n| para não");
 		validador = leia.nextLine().toUpperCase();
 
 		if (validador.equals("S")) {
-			mensagem = "Você é Infelizmente você não está apto para utilizar este programa, aconselhamos que converse com seu médico para obter suas informações de saúde.";
+			mensagem = "Infelizmente, você não está apto para utilizar este programa, aconselhamos que converse com seu médico para obter melhores orientações de saúde.";
 			System.out.println(mensagem);
 			System.exit(0);
 		} else {
@@ -37,15 +42,16 @@ public class TestarClasse {
 				case 1:
 					leia.nextLine();
 					Adulto b = new Adulto();
+					b.setFaixa("ADULTO");
 					System.out.println("Digite o nome: ");
 					b.setNome(leia.nextLine());
 					System.out.println("Digite o genero: ");
 					b.setGenero(leia.nextLine());
-					System.out.println("Digite quantas vezes você pratica atividade fisica por dia");
+					System.out.println("Digite quantas vezes você pratica atividade fisica por semana");
 					b.setFrequenciaAtiv(leia.nextInt());
 					System.out.println("Digite a idade: ");
 					b.setIdade(leia.nextInt());
-					while (b.getIdade() < 18 || b.getIdade() > 100) {
+					while (b.getIdade() < 18) {
 						System.out.println(
 								"A idade esta abaixo (de 18 para cima) do considerado para adulto, por favor digite novamente");
 						b.setIdade(leia.nextInt());
@@ -63,11 +69,12 @@ public class TestarClasse {
 				case 2:
 					leia.nextLine();
 					Adolescente a = new Adolescente();
+					a.setFaixa("ADOLESCENTE");
 					System.out.println("Digite o nome: ");
 					a.setNome(leia.nextLine());
 					System.out.println("Digite o genero: ");
 					a.setGenero(leia.nextLine());
-					System.out.println("Digite quantas vezes você pratica atividade fisica por dia");
+					System.out.println("Digite quantas vezes você pratica atividade fisica por semana");
 					a.setFrequenciaAtiv(leia.nextInt());
 					System.out.println("Digite a idade: ");
 					a.setIdade(leia.nextInt());
@@ -89,15 +96,16 @@ public class TestarClasse {
 				case 3:
 					leia.nextLine();
 					Infantil c = new Infantil();
+					c.setFaixa("CRIANÇA");
 					System.out.println("Digite o nome: ");
 					c.setNome(leia.nextLine());
 					System.out.println("Digite o genero: ");
 					c.setGenero(leia.nextLine());
-					System.out.println("Digite quantas vezes você pratica atividade fisica por dia");
+					System.out.println("Digite quantas vezes você pratica atividade fisica  por semana");
 					c.setFrequenciaAtiv(leia.nextInt());
 					System.out.println("Digite a idade: ");
 					c.setIdade(leia.nextInt());
-					while (c.getIdade() < 1 || c.getIdade() > 12) {
+					while (c.getIdade() < 6 || c.getIdade() > 12) {
 						System.out.println(
 								"A idade esta abaixo ou acima do considerado para criança, por favor digite novamente");
 						c.setIdade(leia.nextInt());

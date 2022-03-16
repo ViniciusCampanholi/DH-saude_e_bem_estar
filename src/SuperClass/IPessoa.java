@@ -6,8 +6,6 @@ public interface IPessoa {
 	
 	public double calcularImc();
 	
-	public void criarPessoa();
-	
 	public void imprimirRelatorio();
 
 }
