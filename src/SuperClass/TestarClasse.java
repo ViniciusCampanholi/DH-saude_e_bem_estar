@@ -101,7 +101,11 @@ public class TestarClasse {
 					c.setNome(leia.nextLine());
 					System.out.println("Digite o genero: ");
 					c.setGenero(leia.nextLine());
+<<<<<<< HEAD
 					System.out.println("Digite quantas vezes você pratica atividade fisica  por semana");
+=======
+					System.out.println("Digite quantas vezes você pratica atividade fisica por semana");
+>>>>>>> 43402b93c0fd9e96bd8fcf0f810f0d2d015b8f68
 					c.setFrequenciaAtiv(leia.nextInt());
 					System.out.println("Digite a idade: ");
 					c.setIdade(leia.nextInt());
